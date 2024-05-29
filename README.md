@@ -10,12 +10,10 @@ This project was created as part of the ALX School curriculum and a movie club c
 - User authentication with username and password.
 
 ## Screenshots
-[Authentication Page](<public/MovieOver's screenshot of the auth form.PNG>)
+![Authentication Page](<public/MovieOver's screenshot of the auth form.PNG>)
 *Authentication Page: Users can sign up with a username and password to enter the chat rooms.*
 
-
-
-[Chat Room](<public/screenshot of the chat.PNG>)
+![Chat Room](<public/screenshot of the chat.PNG>)
 *Chat Room: Users can discuss their favorite movies in real-time.*
 
 ## Technologies Used

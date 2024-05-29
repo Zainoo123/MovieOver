@@ -1,23 +1,53 @@
 .background {
-    padding: 100px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: calc(100vw - 200px);
-    height: calc(100vh - 200px);
-    background: linear-gradient(150deg, #d9dbe2, #808aac 100%, #282d39 0);
-  }
-  
+  padding: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: calc(100vw - 200px);
+  height: calc(100vh - 200px);
+  background-image: url('11.jpg'); /* Ensure the path is correct */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image within the element */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+
   .auth-container {
     width: 420px;
     height: 292px;
     position: relative;
     top: calc(50vh - 144px - 100px);
     left: calc(50vw - 240px - 100px);
-    background-color: #4a5162;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent with no specific color */
     border-radius: 24px;
-    box-shadow: 0 2px 15px rgb(0 0 0 / 68%);
-  }
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.68);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for animation */
+}
+
+.auth-container:hover {
+    transform: scale(1.05); /* Slightly enlarges the container on hover */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Increases the shadow on hover */
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.68);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75);
+    }
+    100% {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.68);
+    }
+}
+
+.auth-container {
+    animation: pulse 2s infinite; /* Adds a pulsing shadow effect */
+}
+
+
+
   
   .auth-form {
     padding-top: 33px;
@@ -37,12 +67,20 @@
     width: 100%;
     padding: 8px;
     margin-bottom: 24px;
-    background-color: #4a5162;
+    background-color: rgba(255, 255, 255, 0.3); /* Matching the container's transparency */
     outline: none;
     border-width: 0px;
     border-bottom: 2px solid #726dfe;
     color: white;
-  }
+    border-radius: 4px; /* Adding a slight border-radius to match the smooth look */
+    transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out; /* Smooth transition for interaction effects */
+}
+
+.text-input:focus {
+    background-color: rgba(255, 255, 255, 0.5); /* Slightly less transparent on focus */
+    border-bottom: 2px solid #4a5162; /* Change border color on focus for better visibility */
+}
+
   
   .text-input::placeholder {
     color: hsla(0, 0%, 100%, 0.568);
@@ -51,13 +89,29 @@
   .submit-button {
     width: 100%;
     padding: 14px;
-    border-radius: 4px;
+    border-radius: 24px; /* More rounded corners */
     border-width: 0px;
     cursor: pointer;
-    background-color: #726dfe;
+    background: linear-gradient(135deg, #726dfe 0%, #a0a7ff 100%); /* Gradient background */
     color: white;
     outline: none;
-  }
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adding a shadow for depth */
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for interaction effects */
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #a0a7ff 0%, #726dfe 100%); /* Reversing the gradient on hover */
+    transform: translateY(-5px); /* Slightly lifting the button on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increasing the shadow on hover */
+}
+
+.submit-button:active {
+    background: linear-gradient(135deg, #726dfe 0%, #a0a7ff 100%); /* Keeping the gradient same on active */
+    transform: translateY(2px); /* Slightly pressing the button on click */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reducing the shadow on active */
+}
+
+
   
   .submit-button::hover {
     background-color: #938ffe;

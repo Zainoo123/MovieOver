@@ -30,7 +30,7 @@ export default function Auth() {
       <div className='auth-container'>
         <form className='auth-form' onSubmit={(e) => onSubmit(e)}>
           <div className="auth-title">MovieOver</div>
-
+                
           <div className='input-container'>
             <input
               placeholder='Username'
